@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <!-- jquery 라이브러리 참조 -->
+    <!-- 1. 다운로드: 다운로드해서 경로 지정 형식 -->
+    <!-- <script src="jquery-3.6.1.min.js"></script>  -->
+    
+    <!-- 2. CDN: 웹 경로 지정 형식 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
+   
+    <!-- ------------------ -->
+    <script>
+        window.onload=function(){
+        let obj=document.getElementById("a");
+        obj.innerHTML="<h1>Hello JavaScript</h1>";
+        }
+        //아이디가 b인 요소 찾아서 Hi jQuery를 넣어보자.
+        //[1] jquery방법 1
+        $(document).ready(function(){
+            $('#b').html("<h1>Hi jQuery</h1>")
+            // window.jQuery('#b').html("<h1>안녕 jQuery</h1>");
+            //window.jQuery => 를 window.$로 대치되서 줄어듬.
+            //jQuery = $ 
+        })
+        //아이디가 c인 요소 찾아서 Bye jQuery 넣어보자
+        //[2] jquery방법 2
+        $(function(){
+            $('#c').html("<h1>Bye jQuery</h1>")
+            .css("color","green")
+            .css("border","2px dashed tomato")
+        })
+    </script>
+</head>
+<body>
+    <h1>jQuery 시작하기</h1>
+   <p>jQuery: 자바스크립트 라이브러리</p>
+   <p>1. 다운로드: http://jquery.com<br>
+               http://jqueryui.com[확장 기능 제공]<br>
+      2. CDN방식: Content Delivery Network  [통상적으로 많이 씀]          
+   
+   </p>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+</body>
+</html>
